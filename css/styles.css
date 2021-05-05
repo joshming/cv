@@ -127,6 +127,8 @@ hr {
 
 .contact-desc {
   margin-bottom: 50px;
+  width: 40%; 
+  margin: 50px auto;
 }
 
 .btn {
