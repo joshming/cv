@@ -44,6 +44,36 @@ hr {
   margin: 50px auto 50px auto;
 }
 
+/*  Navigation Bar */
+.navigationBar {
+  background-color: #f7fbfc;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navigationBar a {
+  color: #769fcd;
+  font-size: 3vh;
+  text-decoration: none;
+  margin: 10px 50px;
+  float: right;
+}
+
+.JMHome {
+  float: left;
+  font-family: 'Sacramento', cursive;
+}
+
+.navigationBar a:hover{
+  opacity: 50%;
+}
+
+/* Home Page */
+
 .topContainer {
   background-color: #f7fbfc;
   margin: 0;
@@ -127,11 +157,11 @@ hr {
 
 .contact-desc {
   margin-bottom: 50px;
-  width: 40%; 
+  width: 40%;
   margin: 50px auto;
 }
 
-.btn {
+.mybtn {
   background-color:#f7fbfc;
   padding: 20px;
   margin: 30px;
@@ -141,7 +171,7 @@ hr {
   color: #769fcd;
 }
 
-.btn:hover {
+.mybtn:hover {
   border: solid;
   border-color: #f7fbfc;
   background-color: white;
@@ -170,6 +200,6 @@ hr {
 
 .ventalk {
   color: #3f72af;
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: bold;
 }
