@@ -60,12 +60,17 @@ hr {
   font-size: 3vh;
   text-decoration: none;
   margin: 10px 50px;
+}
+
+.navbarMenu a {
   float: right;
 }
 
-.JMHome {
+.navbarName {
   float: left;
   font-family: 'Sacramento', cursive;
+  font-weight: 600;
+  margin: 10px 10px 50px 10px;
 }
 
 .navigationBar a:hover{
