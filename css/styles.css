@@ -70,11 +70,64 @@ hr {
   float: left;
   font-family: 'Sacramento', cursive;
   font-weight: 600;
-  margin: 10px 10px 50px 10px;
 }
 
 .navigationBar a:hover{
   opacity: 50%;
+}
+
+/* Hamburger Menu */
+.nav-btn {
+  position: relative;
+  display: none;
+  float: right;
+  margin-right: 10vw;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+  text-align: justify;
+}
+
+.nav-btn-lines,
+.nav-btn-lines::before,
+.nav-btn-lines::after {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: #111111;
+  transition: all 0.5s ease-in-out;
+}
+.nav-btn-lines::before,
+.nav-btn-lines::after {
+  content: "";
+  position: absolute;
+}
+.nav-btn-lines::before {
+  transform: translateY(-0.5rem);
+}
+.nav-btn-lines::after {
+  transform: translateY(0.5rem);
+}
+/* Hamburger animation */
+.nav-btn.open .nav-btn-lines {
+  transform: translateX(2rem);
+  background-color: transparent;
+  float: right;
+  margin-right: 10vw;
+}
+.nav-btn.open .nav-btn-lines::before {
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  background-color: #111111;
+  float: right;
+  margin-right: 10vw;
+}
+.nav-btn.open .nav-btn-lines::after {
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  background-color: #111111;
+  float: right;
+  margin-right: 10vw;
 }
 
 /* Home Page */
@@ -94,8 +147,8 @@ hr {
 
 .botCloud {
   position: absolute;
-  left: 500px;
-  top: 300px;
+  left: 31.25em;
+  top: 18.75em;
 }
 
 .myName {
@@ -104,9 +157,9 @@ hr {
 
 .topCloud {
   position: absolute;
-  right: 500px;
-  top: 40px;
-  padding: 20px;
+  right: 31.25em;
+  top: 2.5em;
+  padding: 1.25em;
 }
 
 .mountain {
@@ -116,7 +169,7 @@ hr {
 }
 
 .midContainer {
-    margin: 100px 0;
+    margin: 6.25em 0;
 }
 
 .midContainer h2{
@@ -127,8 +180,8 @@ hr {
 }
 
 .profilePic {
-  width: 200px;
-  height: 200px;
+  width: 12.5em;
+  height: 12.5em;
   border-radius: 100%;
 }
 
@@ -207,4 +260,44 @@ hr {
   color: #3f72af;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .mountain{
+    height: 50%;
+    width: 50%;
+  }
+  .nav-btn {
+    display: flex;
+  }
+  .navbarMenu {
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(100vw);
+    background-color: #f7fbfc;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbarMenu.open {
+    transform: translateX(0);
+  }
+  .navbarMenu a {
+    width: 100vw;
+    margin-top: 10vh;
+  }
+  .navbarMenu a {
+    color: #769fcd;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .navigationBar a:hover{
+    opacity: 50%;
+  }
 }
